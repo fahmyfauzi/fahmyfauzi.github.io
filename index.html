@@ -38,7 +38,7 @@
   <header>
     <nav
       class="bg-white container-center mx-[10px] sm:mx-[15px] md:mx-[30px]  border-gray-200 dark:bg-gray-800 fixed top-0 left-0 right-0 z-10 mt-7  py-4 px-6">
-      <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-4">
+      <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-4 ">
         <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
 
           <img class="rounded-full w-8 h-8"
@@ -57,9 +57,9 @@
               d="M1 1h15M1 7h15M1 13h15" />
           </svg>
         </button>
-        <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+        <div class="hidden w-full md:block md:w-auto " id="navbar-default">
           <ul
-            class="font-medium flex flex-col p-4 md:p-0 mt-4  border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800  dark:border-gray-700">
+            class="font-medium flex flex-col p-4 md:p-0 mt-4  border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-2 md:border-0 md:bg-white dark:bg-gray-800  dark:border-gray-700">
             <li>
               <a href="#home"
                 class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-primary md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
@@ -79,9 +79,9 @@
                 class="block py-2 px-3 text-gray-900 rounded md:hover:bg-primary md:border-2 md:hover:text-white  md:p-0 md:px-6 dark:text-white  dark:hover:bg-primary dark:hover:text-white  ">Contact</a>
 
             </li>
-            <li class="mt-3 md:mt-0 flex items-center pl-8 ">
+            <li class="mt-3 md:mt-0 flex items-center ">
               <div class="flex">
-                  <span class="mr-2 text-sm text-slate-500">light</span>
+                  <span class="mr-2 text-sm text-slate-500 ml-3 md:ml-0">light</span>
                   <input type="checkbox" class="hidden" id="dark-toggle">
                   <label for="dark-toggle">
                       <div class="flex h-5 w-9 cursor-pointer items-center rounded-full bg-slate-500 p-1">
@@ -104,10 +104,10 @@
   <!-- content -->
   <main>
     <section id="home">
-      <div class="container-center  mx-[10px] sm:mx-[15px] md:mx-[30px] bg-white ">
-        <div class="flex justify-center items-center h-screen dark:bg-slate-800">
+      <div class="container-center  mx-[10px] sm:mx-[15px] md:mx-[30px] bg-white dark:bg-gray-800 lg:px-12  px-4  md:px-6 sm:px-6 ">
+        <div class="flex justify-center items-center h-screen ">
           <div class="text-center">
-            <h1 class="text-6xl font-black text-gray-900 dark:text-white ">
+            <h1 class="text-6xl font-black text-gray-900 dark:text-white "> 
               I'M John Doe
             </h1>
             <span class="italic dark:text-white" id="element"></span>
@@ -118,8 +118,8 @@
     </section>
 
     <section id="resume">
-      <div class="container-center  mx-[10px] sm:mx-[15px] md:mx-[30px] bg-white pb-16 md:pb-18 dark:bg-gray-800">
-        <div class="justify-center items-center sm:px-8 pt-36 md:px-8 px-6  ">
+      <div class="container-center  mx-[10px] sm:mx-[15px] md:mx-[30px] bg-white dark:bg-gray-800 md:px-6  sm:pb-0 pb-16 md:pb-18 lg:px-12  px-4 sm:px-6  pt-36 ">
+        <div class="justify-center items-center   ">
           <h2 class="mb-6 underline decoration-solid font-semibold text-xl dark:text-white ">
             ABOUT ME
           </h2>
@@ -137,7 +137,7 @@
               ubique ut. Te cule tation munere noluisse. Enim torquatos ne pri,
               eum mollis salutandi corrumpit et, fugit apeirian duo ad.
 
-              <div class="grid md:grid-cols-3 grid-cols-2 gap-2 mt-6">
+              <div class="grid lg:grid-cols-3 grid-cols-2 gap-2 mt-6">
                 <div>
                   <span class="text-primary">Name: </span>
                   <span>John Doe</span>
@@ -334,13 +334,43 @@
     </section>
 
     <section id="portfolio">
-      <div class="container-center  mx-[10px] sm:mx-[15px] md:mx-[30px] bg-white pt-36  dark:bg-gray-800">
-        <div class="justify-center items-center sm:px-4  md:px-8 px-6 sm:pb-0 pb-16 md:pb-18 ">
+      <div class="container-center  mx-[10px] sm:mx-[15px] md:mx-[30px] bg-white dark:bg-gray-800 md:px-6   sm:pb-0 pb-16 md:pb-18 lg:px-12 px-4">
+        <div class="justify-center items-center  ">
           <h2 class="mb-6 underline decoration-solid font-semibold text-xl dark:text-white">
             RECENT WORKS
           </h2>
 
           <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+            <div class="overflow-hidden cursor-pointer" data-modal-target="default-modal"
+              data-modal-toggle="default-modal">
+              <img
+                class="h-auto max-w-full rounded-lg transition duration-300 ease-in-out hover:scale-110 magic-hover magic-hover__square"
+                src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg" alt="" />
+                <div class="text-center mt-4">
+                  <p>
+                    <span class="border border-solid-2 text-primary px-2 border-primary">02 Feb 2024</p>
+                  </span>
+                  <h3 class="font-semibold dark:text-white">UI/UX Desain Error</h3>
+                </div>
+            </div>
+            <div class="overflow-hidden cursor-pointer" data-modal-target="default-modal"
+              data-modal-toggle="default-modal">
+              <img
+                class="h-auto max-w-full rounded-lg transition duration-300 ease-in-out hover:scale-110 magic-hover magic-hover__square"
+                src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg" alt="" />
+            </div>
+            <div class="overflow-hidden cursor-pointer" data-modal-target="default-modal"
+              data-modal-toggle="default-modal">
+              <img
+                class="h-auto max-w-full rounded-lg transition duration-300 ease-in-out hover:scale-110 magic-hover magic-hover__square"
+                src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg" alt="" />
+            </div>
+            <div class="overflow-hidden cursor-pointer" data-modal-target="default-modal"
+              data-modal-toggle="default-modal">
+              <img
+                class="h-auto max-w-full rounded-lg transition duration-300 ease-in-out hover:scale-110 magic-hover magic-hover__square"
+                src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg" alt="" />
+            </div>
             <div class="overflow-hidden cursor-pointer" data-modal-target="default-modal"
               data-modal-toggle="default-modal">
               <img
@@ -361,12 +391,12 @@
     </section>
 
     <section id="contacts">
-      <div class="container-center  mx-[10px] sm:mx-[15px] md:mx-[30px] bg-white dark:bg-gray-800 ">
-        <div class="justify-center items-center sm:px-4 md:px-48 pb-36 px-6">
+      <div class="container-center  mx-[10px] sm:mx-[15px] md:mx-[30px] bg-white dark:bg-gray-800 md:px-6  sm:px-4   px-4 lg:px-12">
+        <div class="justify-center items-center pb-36 ">
           <h2 class="mb-6 underline decoration-solid font-semibold text-xl dark:text-white">
             CONTACTS
           </h2>
-          <div class="grid lg:grid-rows-1 grid-rows-3 lg:grid-cols-3 grid-cols-1 gap-4 pb-16">
+          <div class="grid lg:grid-rows-1 grid-rows-3 lg:grid-cols-3 grid-cols-1 gap-4 pb-8">
             <div>
               <p class="text-2xl dark:text-slate-400">
                 <i class="ri-smartphone-line mb-2"></i>
@@ -500,7 +530,7 @@
             UI/UX Desain Error
           </h3>
           <div class="flex">
-            <div class="shrink w-3/4 pe-20">
+            <div class="shrink w-3/4 pe:6 md:pe-6">
               <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
                 With less than a month to go before the European Union enacts new
                 consumer privacy laws for its citizens, companies around the world
@@ -516,6 +546,8 @@
             </div>
             <div class="flex-none ">
               <!-- Date -->
+              <div class="border-l-2 pl-1">
+
               <div class="mb-6">
                 <p class="font-semibold dark:text-gray-400">Date</p>
                 <p class="dark:text-gray-400">10 April 2023</p>
@@ -529,6 +561,8 @@
                   <i class="ri-instagram-fill"></i>
                 </div>
               </div>
+            </div>
+
             </div>
           </div>
 
@@ -606,6 +640,8 @@ if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.match
 } else {
     darkToggle.checked = false;
 }
+
+
   </script>
 
 
