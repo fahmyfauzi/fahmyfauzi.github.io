@@ -1,14 +1,17 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth ">
+<html lang="en" class="scroll-smooth"  >
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta name="description" content="As a recent graduate with a passion for IT and programming, I specialize in backend development utilizing Node.js, Express, and MongoDB. My proficiency spans from fundamental to advanced concepts, encompassing server setup, route handling, and leveraging Express as a robust framework. Additionally, I excel in database design and management, particularly with MongoDB. Beyond my expertise in Node.js, Express, and MongoDB, I also possess proficiency in web development using PHP and Laravel. I am dedicated to continually enhancing my skills in IT and programming to ensure optimal outcomes for every project.">
   <title>Fahmy Fauzi Alvianda</title>
 
   <!-- cdn tailwindcss -->
   <!-- <script src="https://cdn.tailwindcss.com"></script> -->
-  <link href="./src/output.css" rel="stylesheet">
+  <link href="./assets/css/build.css" rel="stylesheet">
+  <!-- <link rel="stylesheet" href="./src/output.css"> -->
 
   <!-- cdn flowbite -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
@@ -21,14 +24,32 @@
     integrity="sha512-MqL4+Io386IOPMKKyplKII0pVW5e+kb+PI/I3N87G3fHIfrgNNsRpzIXEi+0MQC0sR9xZNqZqCYVcC61fL5+Vg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <script>
-      if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-          document.documentElement.classList.add('dark')
-      } else {
-          document.documentElement.classList.remove('dark')
-      }
-  </script>
+ <!-- setup emailjs -->
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+ <script src="./assets/js/form.js"></script>
+ <script src="https://smtpjs.com/v3/smtp.js"></script>
 
+ <!-- aos -->
+ <link rel="stylesheet" href="./assets/libs/aos/dist/aos.css">
+
+<!-- favicon -->
+<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="./assets/images/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="./assets/images/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon/favicon-16x16.png">
+<link rel="manifest" href="./assets/images/favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="./assets/images/favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
 </head>
 
 <body class="bg-blue-200  ">
@@ -38,12 +59,12 @@
   <header>
     <nav
       class="bg-white container-center mx-[10px] sm:mx-[15px] md:mx-[30px]  border-gray-200 dark:bg-gray-800 fixed top-0 left-0 right-0 z-10 mt-7  py-4 px-6">
-      <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-4 ">
+      <div class=" max-w-screen-xxl flex flex-wrap items-center justify-between mx-auto py-4 ">
         <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
 
           <img class="rounded-full w-8 h-8"
-            src="https://img.freepik.com/free-psd/3d-illustration-human-avatar-profile_23-2150671142.jpg?w=740&t=st=1709959837~exp=1709960437~hmac=e023e7ac8db47fa668deba9c56ec2e3064dbd2fe6ffee7a0d47e947bc56de9fc"
-            alt="image description">
+            src="assets/images/fahmy.jpg"
+            alt="image fahmy">
 
 
           <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Fahmy</span>
@@ -106,9 +127,9 @@
     <section id="home">
       <div class="container-center  mx-[10px] sm:mx-[15px] md:mx-[30px] bg-white dark:bg-gray-800 lg:px-12  px-4  md:px-6 sm:px-6 ">
         <div class="flex justify-center items-center h-screen ">
-          <div class="text-center">
-            <h1 class="text-6xl font-black text-gray-900 dark:text-white "> 
-              I'M John Doe
+          <div class="text-center" data-aos="flip-right" data-aos-duration="1500" data-aos-easing="ease-in-out" >
+            <h1 class="text-6xl font-black text-gray-900 dark:text-white mb-8"> 
+             <span class="block mb-4 text-4xl" >Hello👋, I'M</span>  Fahmy Fauzi Alvianda
             </h1>
             <span class="italic dark:text-white" id="element"></span>
           </div>
@@ -119,63 +140,58 @@
 
     <section id="resume">
       <div class="container-center  mx-[10px] sm:mx-[15px] md:mx-[30px] bg-white dark:bg-gray-800 md:px-6  sm:pb-0 pb-16 md:pb-18 lg:px-12  px-4 sm:px-6  pt-36 ">
-        <div class="justify-center items-center   ">
-          <h2 class="mb-6 underline decoration-solid font-semibold text-xl dark:text-white ">
+        <div class="justify-center items-center   " data-aos="fade-right" data-aos-duration="800" data-aos-easing="ease-in-out">
+          <h2 class="mb-6 underline decoration-solid decoration-sky-500/30 font-semibold text-xl dark:text-white ">
             ABOUT ME
           </h2>
-          <div class="sm:flex text-left md:text-center mb-16  sm:mb-18">
+          <div class="sm:flex text-left md:text-center mb-16  sm:mb-18" >
             <div class="flex-none ">
-              <img class="rounded-full w-40 h-40 mx-auto mb-6 sm:mb-0"
-                src="https://img.freepik.com/free-psd/3d-illustration-human-avatar-profile_23-2150671142.jpg?w=740&t=st=1709959837~exp=1709960437~hmac=e023e7ac8db47fa668deba9c56ec2e3064dbd2fe6ffee7a0d47e947bc56de9fc"
-                alt="image description" />
+              <img class="rounded-full w-40 h-40 mx-auto mb-6 sm:mb-0"  
+                src="assets/images/fahmy.jpg"
+                alt="image fahmy" />
             </div>
-            <div class="grow sm:ml-6 dark:text-white">
-              Lorem ipsum dolor sit amet, in quodsi vulputate pro. Ius illum
-              vocent mediocritatem an, cule dicta iriure at. Ubique maluisset
-              vel te, his dico vituperata ut. Pro ei phaedrum maluisset. Ex
-              audire suavitate has, ei quodsi tacimates sapientem sed, pri zril
-              ubique ut. Te cule tation munere noluisse. Enim torquatos ne pri,
-              eum mollis salutandi corrumpit et, fugit apeirian duo ad.
+            <div class="grow sm:ml-6 dark:text-white"  >
+              A recent graduate with an interest in IT and programming, with a primary focus on backend development using Node.js, Express, and MongoDB.  I have mastered various concepts, from basic to advanced, including server creation, route management, and using Express as a framework. In addition, I also have expertise in designing and managing databases with MongoDB. Besides focusing on Node.js, Express, and MongoDB technologies only. I also have experience in web development with PHP and Laravel. I am always eager to continue expanding my knowledge in IT and programming to deliver the best results in every project.
 
               <div class="grid lg:grid-cols-3 grid-cols-2 gap-2 mt-6">
                 <div>
-                  <span class="text-primary">Name: </span>
-                  <span>John Doe</span>
+                  <span class="text-primary block md:inline">Name: </span> 
+                  <span>Fahmy Fauzi Alvianda</span>
                 </div>
                 <div>
-                  <span class="text-primary">Age: </span>
-                  <span>22 Years</span>
+                  <span class="text-primary block md:inline">Age: </span>
+                  <span>24 Years</span>
                 </div>
                 <div>
-                  <span class="text-primary">Job: </span>
-                  <span>Web Developer</span>
+                  <span class="text-primary block md:inline">Job: </span>
+                  <span>Junior Web Developer</span>
                 </div>
                 <div>
-                  <span class="text-primary">Citizenship: </span>
-                  <span>Ukraine</span>
+                  <span class="text-primary block md:inline">Citizenship: </span>
+                  <span>Indonesia</span>
                 </div>
                 <div>
-                  <span class="text-primary">Residence: </span>
-                  <span>Kiev</span>
+                  <span class="text-primary block md:inline">Residence: </span>
+                  <span>Kawali, Ciamis</span>
                 </div>
                 <div>
-                  <span class="text-primary">E-mail: </span>
-                  <span>jon@gmail.com</span>
+                  <span class="text-primary block md:inline">E-mail: </span>
+                  <span>fahmyfauzii@gmail.com</span>
                 </div>
               </div>
               <div class="mt-4">
-                <button type="button"
+                <a href="https://drive.google.com/drive/folders/1VqP6U9EYCxD6S0ayugP_YKb-GjzCZmW3?usp=sharing" target="_blank" type="button"
                   class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"><i
-                    class="ri-download-line"></i> Download CV </button>
+                    class="ri-download-line"></i> Download CV </a>
 
               </div>
             </div>
           </div>
 
           <!-- timeline -->
-          <div class="sm:grid md:grid-flow-col gap-1 mb-16 md:mb-18">
-            <div class="mb-16 md:mb-0 me-6">
-              <h2 class="mb-6 underline decoration-solid font-semibold text-xl dark:text-white">
+          <div class="sm:grid md:grid-flow-col gap-1 mb-16 md:mb-18" data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-in-out">
+            <div class="mb-16 md:mb-0 me-6" >
+              <h2 class="mb-6 underline decoration-solid  decoration-sky-500/30 font-semibold text-xl dark:text-white">
                 Experience
               </h2>
               <ol class="relative border-s border-gray-200 dark:border-gray-700">
@@ -183,51 +199,36 @@
                   <div
                     class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
                   </div>
-                  <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">2013 -
-                    Present</time>
+                  <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">September 2023 -
+                    present</time>
                   <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
-                    Front-end Developer - Google Inc
-                  </h3>
-                  <p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
-                    Get access to over 20+ pages including a dashboard layout,
-                    charts, kanban board, calendar, and pre-order E-commerce &
-                    Marketing pages.
-                  </p>
-                </li>
-                <li class="mb-10 ms-4">
-                  <div
-                    class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
-                  </div>
-                  <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">2011 -
-                    2012</time>
-                  <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
-                    Art Director - Facebook Inc
+                   Junior Programmer - CV. Channa Striatas Mediatek
                   </h3>
                   <p class="text-base font-normal text-gray-500 dark:text-gray-400">
-                    Morbi nulla arcu, pellentesque sed egestas in, tempor eget
-                    felis. Nullam tincidunt augue in leo feugiat, quis interdum
-                    nisi sollicitudin.
+                    - Created an android application "Pharmacist Information System" (SIAp) collaboratively in a team. I was responsible for the implementation and management of the Room Database section by using a clean architecture approach and applying the Model View ViewModel (MVVM) design pattern.
+                  </p>
+                  <p class="text-base font-normal text-gray-500 dark:text-gray-400">
+                    - I participated in the development of web-based applications, especially in the "Pharma Career" project. My main focus was on the frontend aspect, where I had the responsibility of slicing the design from Figma to HTML based on the available templates, as well as participating in the frontend creation using angularjs.
                   </p>
                 </li>
                 <li class="ms-4">
                   <div
                     class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
                   </div>
-                  <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">2009 -
-                    2010</time>
+                  <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">March 2022 -
+                    May 2022</time>
                   <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
-                    Senior Developer - Abc Inc
+                    Junior Web Developer - PT. Cantara Digital Innovation
                   </h3>
                   <p class="text-base font-normal text-gray-500 dark:text-gray-400">
-                    Morbi nulla arcu, pellentesque sed egestas in, tempor eget
-                    felis. Nullam tincidunt augue in leo
+                    Improve the performance of job vacancy provider websites that are still using Wordpress and many plugins are installed which cause the website performance to be heavy so that it must be upgraded using the Laravel framework.
                   </p>
                 </li>
               </ol>
             </div>
             <div>
               <div>
-                <h2 class="mb-6 underline decoration-solid font-semibold text-xl dark:text-white">
+                <h2 class="mb-6 underline decoration-solid   decoration-sky-500/30 font-semibold text-xl dark:text-white">
                   Education
                 </h2>
                 <ol class="relative border-s border-gray-200 dark:border-gray-700">
@@ -235,46 +236,46 @@
                     <div
                       class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
                     </div>
-                    <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">2007 -
-                      2008</time>
+                    <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">November 2019 – Juli 2023</time>
                     <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
-                      Art University of New York
+                      Universitas Perjuangan Tasikmalaya
                     </h3>
+                    <p class="mb-4 text-base font-normal text-gray-700 dark:text-gray-300">Informatics Engineering - GPA 3.50</p>
                     <p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
-                      Morbi nulla arcu, pellentesque sed egestas in, tempor eget
-                      felis. Nullam tincidunt augue in leo feugiat, quis
-                      interdum nisi sollicitudin.
+                      My Final Project is titled "Comparison of Brute Force Algorithm with Boyer-Moore Algorithm on Web-Based Job Search Application" (2023). In this research, I identified problems, collected data, analyzed needs, implemented both algorithms using the PHP programming language with the Laravel framework, and tested the speed and accuracy of the data obtained from the search.
                     </p>
                   </li>
                   <li class="mb-10 ms-4">
                     <div
                       class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
                     </div>
-                    <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">2004 -
-                      2006</time>
+                    <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">2016 -
+                      2019</time>
                     <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
-                      Front-end Course
+                      SMK Muhammadiyah Kawali
                     </h3>
-                    <p class="text-base font-normal text-gray-500 dark:text-gray-400">
-                      Morbi nulla arcu, pellentesque sed egestas in, tempor eget
-                      felis. Nullam tincidunt augue in leo feugiat, quis
-                      interdum nisi sollicitudin.
-                    </p>
+                    <p class="mb-4 text-base font-normal text-gray-700 dark:text-gray-300">Light Vehicle Engineering</p>
+                    
+                  </li>
+                  <li class="mb-10 ms-4">
+                    <div
+                      class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
+                    </div>
+                    <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">2013 -
+                      2016</time>
+                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+                      SMPN 3 Kawali
+                    </h3>
                   </li>
                   <li class="ms-4">
                     <div
                       class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
                     </div>
-                    <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">2003 -
-                      2005</time>
+                    <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">2007 -
+                      2013</time>
                     <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
-                      IT High School
+                      MIS Plus Al-Ittihaad
                     </h3>
-                    <p class="text-base font-normal text-gray-500 dark:text-gray-400">
-                      Morbi nulla arcu, pellentesque sed egestas in, tempor eget
-                      felis. Nullam tincidunt augue in leo feugiat, quis
-                      interdum nisi sollicitudin.
-                    </p>
                   </li>
                 </ol>
               </div>
@@ -282,18 +283,16 @@
           </div>
 
           <!-- skills -->
-          <h2 class="mb-6 underline decoration-solid font-semibold text-xl dark:text-white">
-            Skills
-          </h2>
-          <div class="text-6xl items-center ">
-            <div class="grid sm:grid-rows-3 grid-rows-5 sm:grid-cols-5 grid-cols-3 gap-4">
+          
+          <div class="text-6xl items-center " data-aos="fade-up"  data-aos-duration="800" data-aos-easing="ease-in-out">
+            <h2 class="mb-6 underline decoration-solid font-semibold  decoration-sky-500/30 text-xl dark:text-white">
+              Skills
+            </h2>
+            <div class="grid grid-cols-3 sm:grid-cols-3 sm:grid-rows-3 md:grid-cols-4 grid-rows-5 lg:grid-cols-5  gap-4">
+              
               <div>
-                <a href=""
-                  class="transition-all duration-300 rounded-lg cursor-pointer filter grayscale hover:grayscale-0">
-                  <i class="devicon-html5-plain colored"></i>
-                </a>
+                <i class="devicon-html5-plain colored"></i>
               </div>
-
               <div>
                 <i class="devicon-css3-plain-wordmark colored"></i>
               </div>
@@ -307,20 +306,31 @@
                 <i class="devicon-tailwindcss-plain-wordmark colored"></i>
               </div>
               <div>
-                <i class="devicon-livewire-plain-wordmark colored"></i>
+             
+            <i class="devicon-php-plain colored"></i>
+          
               </div>
               <div>
                 <i class="devicon-laravel-original-wordmark colored"></i>
               </div>
               <div>
-                <i class="devicon-php-plain colored"></i>
+                
+            <i class="devicon-mysql-plain-wordmark colored"></i>
+          
               </div>
+
               <div>
-                <i class="devicon-express-original-wordmark colored"></i>
+                
+            <i class="devicon-git-plain-wordmark colored"></i>
+          
               </div>
               <div>
                 <i class="devicon-nodejs-plain-wordmark colored"></i>
               </div>
+              <div>
+                <i class="devicon-express-original-wordmark colored"></i>
+              </div>
+           
               <div>
                 <i class="devicon-mongodb-plain-wordmark colored"></i>
               </div>
@@ -334,57 +344,54 @@
     </section>
 
     <section id="portfolio">
-      <div class="container-center  mx-[10px] sm:mx-[15px] md:mx-[30px] bg-white dark:bg-gray-800 md:px-6   sm:pb-0 pb-16 md:pb-18 lg:px-12 px-4">
-        <div class="justify-center items-center  ">
-          <h2 class="mb-6 underline decoration-solid font-semibold text-xl dark:text-white">
+      <div class="container-center  mx-[10px] sm:mx-[15px] md:mx-[30px] bg-white dark:bg-gray-800 md:px-6   sm:pb-0 pb-16 md:pb-18 lg:px-12 px-4" >
+        <div class="justify-center items-center  " data-aos="fade-up"  data-aos-duration="800" data-aos-easing="ease-in-out">
+          <h2 class="mb-6 underline decoration-solid font-semibold text-xl  decoration-sky-500/30 dark:text-white">
             RECENT WORKS
           </h2>
 
           <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+            <!-- Job Vacancy -->
             <div class="overflow-hidden cursor-pointer" data-modal-target="default-modal"
               data-modal-toggle="default-modal">
               <img
                 class="h-auto max-w-full rounded-lg transition duration-300 ease-in-out hover:scale-110 magic-hover magic-hover__square"
-                src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg" alt="" />
+                src="assets/images/didamelid/1.png" alt="" />
                 <div class="text-center mt-4">
                   <p>
-                    <span class="border border-solid-2 text-primary px-2 border-primary">02 Feb 2024</p>
+                    <span class="border border-solid-2 text-primary px-2 border-primary">May 2022</p>
                   </span>
-                  <h3 class="font-semibold dark:text-white">UI/UX Desain Error</h3>
+                  <h3 class="font-semibold dark:text-white">Job Vacancy</h3>
                 </div>
             </div>
-            <div class="overflow-hidden cursor-pointer" data-modal-target="default-modal"
-              data-modal-toggle="default-modal">
-              <img
-                class="h-auto max-w-full rounded-lg transition duration-300 ease-in-out hover:scale-110 magic-hover magic-hover__square"
-                src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg" alt="" />
-            </div>
-            <div class="overflow-hidden cursor-pointer" data-modal-target="default-modal"
-              data-modal-toggle="default-modal">
-              <img
-                class="h-auto max-w-full rounded-lg transition duration-300 ease-in-out hover:scale-110 magic-hover magic-hover__square"
-                src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg" alt="" />
-            </div>
-            <div class="overflow-hidden cursor-pointer" data-modal-target="default-modal"
-              data-modal-toggle="default-modal">
-              <img
-                class="h-auto max-w-full rounded-lg transition duration-300 ease-in-out hover:scale-110 magic-hover magic-hover__square"
-                src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg" alt="" />
-            </div>
-            <div class="overflow-hidden cursor-pointer" data-modal-target="default-modal"
-              data-modal-toggle="default-modal">
-              <img
-                class="h-auto max-w-full rounded-lg transition duration-300 ease-in-out hover:scale-110 magic-hover magic-hover__square"
-                src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg" alt="" />
-            </div>
-            <div>
-              <img class="h-auto max-w-full rounded-lg"
-                src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-2.jpg" alt="" />
-            </div>
-            <div>
-              <img class="h-auto max-w-full rounded-lg"
-                src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-2.jpg" alt="" />
-            </div>
+
+            <!-- Siap Notif Mobile -->
+            <div class="overflow-hidden cursor-pointer" data-modal-target="siap-mobile"
+            data-modal-toggle="siap-mobile">
+            <img
+              class="h-auto max-w-full rounded-lg transition duration-300 ease-in-out hover:scale-110 magic-hover magic-hover__square img-cover"
+              src="assets/images/siap-mobile/2.jpg" alt="" />
+              <div class="text-center mt-4">
+                <p>
+                  <span class="border border-solid-2 text-primary px-2 border-primary">January 2024</p>
+                </span>
+                <h3 class="font-semibold dark:text-white">SIAp Notifikasi Mobile</h3>
+              </div>
+          </div>
+            <!-- Pharma Career -->
+            <div class="overflow-hidden cursor-pointer" data-modal-target="pharma-career"
+            data-modal-toggle="pharma-career">
+            <img
+              class="h-auto max-w-full rounded-lg transition duration-300 ease-in-out hover:scale-110 magic-hover magic-hover__square img-cover"
+              src="assets/images/pharam-career/1.png" alt="" />
+              <div class="text-center mt-4">
+                <p>
+                  <span class="border border-solid-2 text-primary px-2 border-primary">-</p>
+                </span>
+                <h3 class="font-semibold dark:text-white">SIAp Notifikasi Mobile</h3>
+              </div>
+          </div>
+
           </div>
         </div>
       </div>
@@ -392,8 +399,8 @@
 
     <section id="contacts">
       <div class="container-center  mx-[10px] sm:mx-[15px] md:mx-[30px] bg-white dark:bg-gray-800 md:px-6  sm:px-4   px-4 lg:px-12">
-        <div class="justify-center items-center pb-36 ">
-          <h2 class="mb-6 underline decoration-solid font-semibold text-xl dark:text-white">
+        <div class="justify-center items-center pb-36 " data-aos="fade-up"  data-aos-duration="800" data-aos-easing="ease-in-out">
+          <h2 class="mb-6 underline decoration-solid font-semibold text-xl  decoration-sky-500/30 dark:text-white">
             CONTACTS
           </h2>
           <div class="grid lg:grid-rows-1 grid-rows-3 lg:grid-cols-3 grid-cols-1 gap-4 pb-8">
@@ -402,7 +409,10 @@
                 <i class="ri-smartphone-line mb-2"></i>
                 <span>Phone</span>
               </p>
-              <p class="dark:text-white">+ (231) 456 67 89</p>
+              <p class="dark:text-white">
+                <a target="_blank" class="hover:underline" href="https://t.me/+6282118418130">
+                + 62 8211 8418 130
+              </a></p>
             </div>
             <div>
               <p class="text-2xl dark:text-slate-400">
@@ -410,7 +420,7 @@
                 <span>Email</span>
               </p>
               <p>
-                <a href="mailto:steve-pearson@gmail.com" class="dark:text-white">steve-pearson@gmail.com</a>
+                <a href="mailto:fahmyfauzii@gmail.com" class="dark:text-white hover:underline">fahmyfauzii@gmail.com</a>
               </p>
             </div>
             <div>
@@ -418,38 +428,38 @@
                 <i class="ri-map-pin-fill mb-2"></i>
                 <span>Address</span>
               </p>
-              <p class="dark:text-white">2621 W Pico Blvd, Los Angeles</p>
+              <p class="dark:text-white">Winduraja,Kec. Kawali, Kab. Ciamis </p>
 
             </div>
           </div>
           <!-- send message email -->
-          <form class="max-w-full mx-auto pb-16 sm:pb-0">
+          <form id="contact-form" class="max-w-full mx-auto pb-16 sm:pb-0">
             <div class="relative z-0 w-full mb-5 group">
-              <input type="text" name="floating_name" id="floating_name"
+              <input type="text" name="name" id="name"
                 class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-                placeholder=" " required />
-              <label for="floating_name"
+                 required autocomplete="off"/>
+              <label for="name"
                 class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Name</label>
             </div>
             <div class="relative z-0 w-full mb-5 group">
-              <input type="email" name="floating_email" id="floating_email"
+              <input type="email" name="email" id="email"
                 class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-                placeholder=" " required />
-              <label for="floating_email"
+                placeholder=" " required autocomplete="off" />
+              <label for="email"
                 class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Email
                 address</label>
             </div>
             <div class="relative z-0 w-full mb-5 group">
-              <textarea type="text" rows="2" name="floating_Messsage" id="floating_Messsage"
+              <textarea type="text" rows="2" name="message" id="message"
                 class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-                placeholder=" " required /></textarea>
-              <label for="floating_Messsage"
+                placeholder=" " required autocomplete="off" /></textarea>
+              <label for="message"
                 class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Messsage</label>
             </div>
 
 
 
-            <button type="submit"
+            <button id="submit-button" type="submit"
               class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Send
               Message</button>
           </form>
@@ -477,13 +487,13 @@
     </span>
     <ul class="flex flex-wrap items-center  mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
       <li>
-        <a href="#" class="hover:underline me-4 md:me-6 text-2xl"><i class="ri-twitter-fill"></i></a>
+        <a href="https://www.linkedin.com/in/fahmyfauzi/" target="_blank" class="hover:underline me-4 md:me-6 "><i class="ri-linkedin-box-fill"></i></a>
       </li>
       <li>
-        <a href="#" class="hover:underline me-4 md:me-6"><i class="ri-github-fill"></i></a>
+        <a href="https://github.com/fahmyfauzi" target="_blank" class="hover:underline me-4 md:me-6"><i class="ri-github-fill"></i></a>
       </li>
       <li>
-        <a href="#" class="hover:underline me-4 md:me-6"><i class="ri-instagram-fill"></i></a>
+        <a href="https://www.instagram.com/fahmyfauzii/" target="_blank" class="hover:underline me-4 md:me-6"><i class="ri-instagram-fill"></i></a>
       </li>
 
     </ul>
@@ -495,14 +505,14 @@
     class="fixed bottom-10 right-4 z-[9999]  h-14 w-14 items-center hidden justify-center rounded-full bg-primary p-4 hover:animate-pulse"
     id="to-top">
     <!-- <span class="mt-2 block h-5 rotate-45 w-5 border-t-2 border-l-2"></span> -->
-    <i class="ri-arrow-up-line text-2xl dark:text-white"></i>
+    <i class="ri-arrow-up-line text-2xl text-white "></i>
   </a>
   <!-- back to top end -->
 
 
 
   <!-- MODAL WORK -->
-  <!-- Main modal -->
+  <!-- Modal Job Vacancy -->
   <div id="default-modal" tabindex="-1" aria-hidden="true"
     class="hidden  overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
     <div class="relative p-4 w-full max-w-2xl max-h-full">
@@ -524,61 +534,30 @@
         <!-- Modal body -->
 
         <div class="p-4 md:p-5 space-y-4  overflow-y-auto h-[780px]">
-          <img class="h-auto max-w-full rounded-lg " src="assets\images\project1.png" alt="image description" />
+          <img class="h-auto max-w-full rounded-lg " src="assets/images/didamelid/1.png" alt="image description" />
 
           <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
-            UI/UX Desain Error
+            Job Vacancy Web
           </h3>
-          <div class="flex">
-            <div class="shrink w-3/4 pe:6 md:pe-6">
+          <!-- <a href="#!" type="button" class="px-3 py-2 text-xs font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Demo</a>
+          <a  href="#!" type="button" class="px-3 py-2 text-xs font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Repository</a> -->
               <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                With less than a month to go before the European Union enacts new
-                consumer privacy laws for its citizens, companies around the world
-                are updating their terms of service agreements to comply.
+                Recreate the didamel.id job vacancy portal, because the current system uses wordpress which makes the website slow because of the many plugins installed. This application is made to fulfill the value of the course, namely Practical Work, I include a practical work report.
               </p>
-              <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                The European Union’s General Data Protection Regulation (G.D.P.R.)
-                goes into effect on May 25 and is meant to ensure a common set of
-                data rights in the European Union. It requires organizations to
-                notify users as soon as possible of high-risk data breaches that
-                could personally affect them.
-              </p>
-            </div>
-            <div class="flex-none ">
-              <!-- Date -->
-              <div class="border-l-2 pl-1">
-
-              <div class="mb-6">
-                <p class="font-semibold dark:text-gray-400">Date</p>
-                <p class="dark:text-gray-400">10 April 2023</p>
-              </div>
-              <!-- Share -->
-              <div>
-                <p class="font-semibold dark:text-gray-400">Share</p>
-                <div class="dark:text-gray-400">
-                  <i class="ri-facebook-fill"></i>
-                  <i class="ri-twitter-fill"></i>
-                  <i class="ri-instagram-fill"></i>
-                </div>
-              </div>
-            </div>
-
-            </div>
-          </div>
-
-
+           
 
           <div class="grid grid-cols-2 gap-2">
             <div class="col-span-2 ">
-              <img class="h-auto max-w-full" src="assets\images\project1.png" alt="image description">
+              <img class="h-auto max-w-full" src="assets/images/didamelid/2.png" alt="image description">
             </div>
             <div class="">
 
-              <img class="h-auto max-w-full" src="assets\images\project1.png" alt="image description">
+              <img class="h-auto max-w-full" src="assets/images/didamelid/3.png" alt="image description">
 
             </div>
             <div class="">
-              <img class="h-auto max-w-full" src="assets\images\project1.png" alt="image description">
+              <img class="h-auto max-w-full" src="assets/images/didamelid/2.png" alt="image description">
+              <img class="h-auto max-w-full" src="assets/images/didamelid/4.png" alt="image description">
             </div>
 
           </div>
@@ -587,66 +566,130 @@
       </div>
     </div>
   </div>
+  <!-- Modal Siap Notif Mobile -->
+  <div id="siap-mobile" tabindex="-1" aria-hidden="true"
+    class="hidden  overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+    <div class="relative p-4 w-full max-w-2xl max-h-full">
+      <!-- Modal content -->
+      <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+        <!-- Modal header -->
+        <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
+
+          <button type="button"
+            class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+            data-modal-hide="siap-mobile">
+            <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+            </svg>
+            <span class="sr-only">Close modal</span>
+          </button>
+        </div>
+        <!-- Modal body -->
+
+        <div class="p-4 md:p-5 space-y-4  overflow-y-auto h-[780px]">
+          <img class="h-auto max-w-full rounded-lg " src="assets/images/siap-mobile/2.jpg" alt="image description" />
+
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+            Sistem Informasi Apoteker (SIAp) Notifikasi Mobile
+          </h3>
+          <!-- <a href="#!" type="button" class="px-3 py-2 text-xs font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Demo</a>
+          <a  href="#!" type="button" class="px-3 py-2 text-xs font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Repository</a> -->
+              <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+                my first project working at CV. Channa Striatas Mediatek is contributing to the creation of the Pharmacist Information System (SIAp) Notification application. I was given the task of handling the database room in the SIAp Notification application.
+              </p>
+           
+
+          <div class="grid grid-cols-2 gap-2">
+
+            <div class="col-span-2">
+              <img class="h-auto max-w-full" src="assets/images/siap-mobile/5.jpg" alt="image description">        
+            </div>
+            <div class="">
+              <img class="h-auto max-w-full" src="assets/images/siap-mobile/4.png" alt="image description">        
+            </div>
+            <div class="">
+              <img class="h-auto max-w-full" src="assets/images/siap-mobile/3.png" alt="image description">        
+            </div>
+     
+
+          </div>
+        </div>
+
+      </div>
+    </div>
   </div>
+  <!-- Modal Pharma Career -->
+  <div id="pharma-career" tabindex="-1" aria-hidden="true"
+    class="hidden  overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+    <div class="relative p-4 w-full max-w-2xl max-h-full">
+      <!-- Modal content -->
+      <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+        <!-- Modal header -->
+        <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
+
+          <button type="button"
+            class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+            data-modal-hide="pharma-career">
+            <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+            </svg>
+            <span class="sr-only">Close modal</span>
+          </button>
+        </div>
+        <!-- Modal body -->
+
+        <div class="p-4 md:p-5 space-y-4  overflow-y-auto h-[780px]">
+          <img class="h-auto max-w-full rounded-lg " src="assets/images/pharam-career/1.png" alt="image description" />
+
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+            Pharma Career
+          </h3>
+          <!-- <a href="#!" type="button" class="px-3 py-2 text-xs font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Demo</a>
+          <a  href="#!" type="button" class="px-3 py-2 text-xs font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Repository</a> -->
+              <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+                next project at CV. Channa Striatas Mediatek I was trusted to handle slicing figma designs into HTML. after succeeding I contributed to the frontend ui/ux using AngularJS.
+              </p>
+           
+
+          <div class="grid grid-cols-2 gap-2">
+            <div class="col-span-2 ">
+              <img class="h-auto max-w-full" src="assets/images/pharam-career/2.png" alt="image description">
+            </div>
+            <div class="">
+
+              <img class="h-auto max-w-full" src="assets/images/pharam-career/4.png" alt="image description">
+
+            </div>
+            <div class="">
+              <img class="h-auto max-w-full" src="assets/images/pharam-career/3.png" alt="image description">
+            </div>
+
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+ 
 
   <!-- cdn js flowbite -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
 
   <!-- cdn typedjs -->
   <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-  <!-- Setup and start animation! -->
+
+  <!-- aos js -->
+  <script src="./assets/libs/aos/dist/aos.js"></script>
+
+  <!-- script custom js -->
+  <script src="assets/js/script.js"></script>
+
   <script>
-    var typed = new Typed("#element", {
-      strings: ["Programmer.", "Web Developer"],
-      typeSpeed: 80,
-      loop: true,
-    });
-
-    //navbar fixed
-    window.onscroll = function () {
-      const header = document.querySelector('header');
-      const fixedNav = header.offsetTop;
-      const toTop = document.querySelector('#to-top');
-
-      if (window.pageYOffset > fixedNav) {
-        header.classList.add('navbar-fixed');
-        toTop.classList.remove('hidden');
-        toTop.classList.add('flex');
-      } else {
-        header.classList.remove('navbar-fixed');
-        toTop.classList.remove('flex');
-        toTop.classList.add('hidden');
-      }
-    };
-
-    
-// darkmode toggle
-const darkToggle = document.querySelector('#dark-toggle');
-const html = document.querySelector('html');
-
-darkToggle.addEventListener('click', function() {
-    if (darkToggle.checked) {
-        html.classList.add('dark');
-        localStorage.theme = 'dark';
-    } else {
-        html.classList.remove('dark');
-        localStorage.theme = 'light';
-    }
-});
-
-//pindah posisi toggle sesuai mode ketika refresh
-if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-    darkToggle.checked = true;
-} else {
-    darkToggle.checked = false;
-}
-
-
+    AOS.init();
   </script>
-
-
-
-
 </body>
 
 </html>
